@@ -28,6 +28,13 @@
 //   }
 // }
 
+
+/**
+ * 
+ * @param requestHandler 
+ * @returns function (req, res, next)
+ * It is a wrapper that wraps the requestHandler function in a Promise Catch Block.
+ */
 const asyncHandler = (requestHandler) => {
   return (req, res, next) => {
     return Promise.resolve(requestHandler(req, res, next)).catch(error => {

@@ -16,7 +16,8 @@ connectDB()
   })
 })
 .catch((error) => {
-  console.log(`index::Mongo Db Connection failed::${error}`)
+  console.log(`index::Mongo Db Connection failed::${error}`);
+  process.exit(1)
 });
 // const app = express();
 
